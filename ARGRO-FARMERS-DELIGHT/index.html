@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agro Farmers Delight — Curated farm inputs &amp; services</title>
+    <meta name="description" content="Agricultural products and services with checkout on Selar. Seeds, crop protection, tools, and expert help for growers." />
+    <meta name="theme-color" content="#2d5016" />
+    <meta name="keywords" content="farm inputs, seeds, crop protection, agricultural tools, farming services, Nigeria" />
+    <link rel="canonical" href="https://agrodelight.farm.com/" />
+    <meta property="og:title" content="Agro Farmers Delight — Curated farm inputs &amp; services" />
+    <meta property="og:description" content="Browse and buy agricultural products directly: seeds, organic inputs, tools, and expert consultations. Checkout securely on Selar." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agrodelight.farm.com/" />
+    <meta property="og:image" content="https://agrodelight.farm.com/assets/images/hero/og-home.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Agro Farmers Delight" />
+    <meta name="twitter:description" content="Curated agricultural inputs and services for serious growers." />
+    <meta name="twitter:image" content="https://agrodelight.farm.com/assets/images/hero/og-home.jpg" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">Agro <span>Farmers Delight</span></a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="search.html">Search</a>
+          <a href="categories/seeds.html">Seeds</a>
+          <a href="categories/crop-protection.html">Crop protection</a>
+          <a href="categories/tools.html">Tools</a>
+          <a href="categories/services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile">
+          <span class="visually-hidden">Menu</span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="search.html">Search</a>
+        <a href="categories/seeds.html">Seeds</a>
+        <a href="categories/crop-protection.html">Crop protection</a>
+        <a href="categories/tools.html">Tools</a>
+        <a href="categories/services.html">Services</a>
+        <a href="season.html">This season</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="policies.html">Policies</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy anim-slide-in-left">
+            <p class="tag anim-scale-pulse-soft">Curated for growers</p>
+            <h1>Stronger harvests start with the right inputs.</h1>
+            <p class="muted">
+              Browse seeds, protection, tools, and services—then complete your purchase securely on
+              <strong>Selar</strong>.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="catalog.html">Shop all products</a>
+              <a class="btn btn--outline" href="categories/seeds.html">Browse seeds</a>
+            </div>
+          </div>
+          <div class="cube-section anim-slide-in-left">
+            <div class="cube-section__label">
+              <span class="tag">Featured</span>
+              <span class="muted">Top product of the day · 3D cube</span>
+            </div>
+            <div class="cube-scene">
+              <div class="cube" id="featured-cube" role="img" aria-label="Featured product of the day">
+                <div class="cube-face cube-face--front" data-cube-face="front"></div>
+                <div class="cube-face cube-face--back" data-cube-face="back"></div>
+                <div class="cube-face cube-face--right" data-cube-face="right"></div>
+                <div class="cube-face cube-face--left" data-cube-face="left"></div>
+                <div class="cube-face cube-face--top" data-cube-face="top"></div>
+                <div class="cube-face cube-face--bottom" data-cube-face="bottom"></div>
+              </div>
+            </div>
+            <p id="cube-caption" class="cube-caption muted">Loading featured product…</p>
+            <div class="cube-controls">
+              <a class="btn btn--primary anim-scale-pulse" id="cube-selar-cta" href="https://selar.co" target="_blank" rel="noopener noreferrer"
+                >Buy on Selar</a
+              >
+              <button type="button" class="btn btn--outline" id="cube-pause">Pause rotation</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-label="Why buy from us">
+        <div class="container">
+          <h2 class="sr-only">Why buy from us</h2>
+          <ul class="trust-strip anim-stagger" style="list-style: none; padding: 0; margin: 0">
+            <li class="trust-strip__item">
+              <strong>Selar checkout</strong>
+              <span class="muted">Payments and digital delivery handled on Selar seller terms.</span>
+            </li>
+            <li class="trust-strip__item">
+              <strong>Practical picks</strong>
+              <span class="muted">Items chosen for smallholders and serious plot trials.</span>
+            </li>
+            <li class="trust-strip__item">
+              <strong>Ask first on inputs</strong>
+              <span class="muted">Always follow local label rules and extension guidance.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Recommendations Section -->
+      <section class="recommendations-section" aria-labelledby="recommendations-title">
+        <div class="container">
+          <div class="recommendations-header">
+            <h2 id="recommendations-title">Recommended For You</h2>
+            <p class="recommendations-subtitle">Based on what's popular this season</p>
+          </div>
+          <div id="personalized-recommendations-grid" class="recommendations-grid recommendations-grid--column-drop" aria-live="polite" aria-busy="true"></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="spotlight-title">
+        <div class="container">
+          <h2 id="spotlight-title" class="section__title">More highlights (flip cards)</h2>
+          <p class="page-intro muted">Click a card to flip. Links on the back go to Selar or full details.</p>
+          <div class="card-grid">
+            <!-- Products 2–7: flip cards -->
+            <article class="flip-card" data-category="seeds" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__front">
+                  <div class="flip-card__media">
+                    <img src="https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&w=800&q=80" alt="" loading="lazy" width="400" height="250" />
+                  </div>
+                  <div class="flip-card__front-body">
+                    <span class="category-chip">seeds</span>
+                    <h3>Open-Pollinated Tomato Seeds</h3>
+                    <p class="muted">Determinate tomato variety; save seed year after year.</p>
+                    <p class="flip-card__hint">Click or press Enter to flip</p>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <div>
+                    <h3>Open-Pollinated Tomato Seeds</h3>
+                    <p class="price">₦4,200</p>
+                    <p class="muted">Checkout on Selar for the latest price and stock.</p>
+                  </div>
+                  <div class="flip-card__actions">
+                    <a class="btn btn--primary" href="https://selar.co/m/agro-tomato-op" target="_blank" rel="noopener noreferrer">Buy on Selar</a>
+                    <a class="btn btn--outline" href="products/product-02.html">Full details</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" data-category="seeds" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__front">
+                  <div class="flip-card__media">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&w=800&q=80" alt="" loading="lazy" width="400" height="250" />
+                  </div>
+                  <div class="flip-card__front-body">
+                    <span class="category-chip">seeds</span>
+                    <h3>Cowpea Seeds Premium</h3>
+                    <p class="muted">Drought-tolerant cowpea line for grain and fodder.</p>
+                    <p class="flip-card__hint">Click or press Enter to flip</p>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <div>
+                    <h3>Cowpea Seeds Premium</h3>
+                    <p class="price">₦5,900</p>
+                    <p class="muted">Secure purchase via Selar.</p>
+                  </div>
+                  <div class="flip-card__actions">
+                    <a class="btn btn--primary" href="https://selar.co/m/agro-cowpea" target="_blank" rel="noopener noreferrer">Buy on Selar</a>
+                    <a class="btn btn--outline" href="products/product-03.html">Full details</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" data-category="seeds" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__front">
+                  <div class="flip-card__media">
+                    <img src="assets/images/products/product-04-rice-seed-pack.png" alt="" loading="lazy" width="400" height="250" />
+                  </div>
+                  <div class="flip-card__front-body">
+                    <span class="category-chip">seeds</span>
+                    <h3>Rice Seed Variety Pack</h3>
+                    <p class="muted">Bundled upland rice varieties for small plots.</p>
+                    <p class="flip-card__hint">Click or press Enter to flip</p>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <div>
+                    <h3>Rice Seed Variety Pack</h3>
+                    <p class="price">₦8,800</p>
+                    <p class="muted">Complete checkout on Selar.</p>
+                  </div>
+                  <div class="flip-card__actions">
+                    <a class="btn btn--primary" href="https://selar.co/m/agro-rice-pack" target="_blank" rel="noopener noreferrer">Buy on Selar</a>
+                    <a class="btn btn--outline" href="products/product-04.html">Full details</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" data-category="crop-protection" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__front">
+                  <div class="flip-card__media">
+                    <img src="assets/images/products/product-05-neem-bio-pesticide.png" alt="" loading="lazy" width="400" height="250" />
+                  </div>
+                  <div class="flip-card__front-body">
+                    <span class="category-chip">crop protection</span>
+                    <h3>Organic Neem Bio-Pesticide</h3>
+                    <p class="muted">Botanical extract concentrate for common chewing pests.</p>
+                    <p class="flip-card__hint">Click or press Enter to flip</p>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <div>
+                    <h3>Organic Neem Bio-Pesticide</h3>
+                    <p class="price">₦6,400</p>
+                    <p class="muted">Use per label and local regulations.</p>
+                  </div>
+                  <div class="flip-card__actions">
+                    <a class="btn btn--primary" href="https://selar.co/m/agro-neem" target="_blank" rel="noopener noreferrer">Buy on Selar</a>
+                    <a class="btn btn--outline" href="products/product-05.html">Full details</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" data-category="crop-protection" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__front">
+                  <div class="flip-card__media">
+                    <img src="assets/images/products/product-06-soil-fumigant.png" alt="" loading="lazy" width="400" height="250" />
+                  </div>
+                  <div class="flip-card__front-body">
+                    <span class="category-chip">crop protection</span>
+                    <h3>Soil Fumigant Solution</h3>
+                    <p class="muted">For qualified users: soil-borne pathogen management.</p>
+                    <p class="flip-card__hint">Click or press Enter to flip</p>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <div>
+                    <h3>Soil Fumigant Solution</h3>
+                    <p class="price">₦14,200</p>
+                    <p class="muted">Professional use only where permitted.</p>
+                  </div>
+                  <div class="flip-card__actions">
+                    <a class="btn btn--primary" href="https://selar.co/m/agro-fumigant" target="_blank" rel="noopener noreferrer">Buy on Selar</a>
+                    <a class="btn btn--outline" href="products/product-06.html">Full details</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" data-category="crop-protection" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__front">
+                  <div class="flip-card__media">
+                    <img src="assets/images/products/product-07-herbicide-select.png" alt="" loading="lazy" width="400" height="250" />
+                  </div>
+                  <div class="flip-card__front-body">
+                    <span class="category-chip">crop protection</span>
+                    <h3>Herbicide Select Pro</h3>
+                    <p class="muted">Post-emergence grass control in broadleaf crops (label-led).</p>
+                    <p class="flip-card__hint">Click or press Enter to flip</p>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <div>
+                    <h3>Herbicide Select Pro</h3>
+                    <p class="price">₦9,300</p>
+                    <p class="muted">Always follow label instructions.</p>
+                  </div>
+                  <div class="flip-card__actions">
+                    <a class="btn btn--primary" href="https://selar.co/m/agro-herbicide" target="_blank" rel="noopener noreferrer">Buy on Selar</a>
+                    <a class="btn btn--outline" href="products/product-07.html">Full details</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p style="margin-top: 2rem">
+            <a class="link-cta" href="catalog.html">View all 25 products →</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="background: #eef7f0" aria-labelledby="cat-title">
+        <div class="container">
+          <h2 id="cat-title" class="section__title">Shop by category</h2>
+          <div class="card-grid anim-stagger" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))">
+            <article class="product-card" style="box-shadow: var(--shadow-md)">
+              <div class="product-card__body">
+                <span class="category-chip">Seeds</span>
+                <h3 class="product-card__title">Seeds</h3>
+                <p class="product-card__meta">Maize, tomato, cowpea, rice, and more.</p>
+                <div class="product-card__footer" style="border: 0; padding-top: 0.75rem">
+                  <a class="link-cta" href="categories/seeds.html">Open category</a>
+                </div>
+              </div>
+            </article>
+            <article class="product-card" style="box-shadow: var(--shadow-md)">
+              <div class="product-card__body">
+                <span class="category-chip">Protection</span>
+                <h3 class="product-card__title">Crop protection</h3>
+                <p class="product-card__meta">Bio-pesticides, herbicides, fungicides.</p>
+                <div class="product-card__footer" style="border: 0; padding-top: 0.75rem">
+                  <a class="link-cta" href="categories/crop-protection.html">Open category</a>
+                </div>
+              </div>
+            </article>
+            <article class="product-card" style="box-shadow: var(--shadow-md)">
+              <div class="product-card__body">
+                <span class="category-chip">Tools</span>
+                <h3 class="product-card__title">Tools &amp; kits</h3>
+                <p class="product-card__meta">Irrigation, sprayers, soil tests, hand tools.</p>
+                <div class="product-card__footer" style="border: 0; padding-top: 0.75rem">
+                  <a class="link-cta" href="categories/tools.html">Open category</a>
+                </div>
+              </div>
+            </article>
+            <article class="product-card" style="box-shadow: var(--shadow-md)">
+              <div class="product-card__body">
+                <span class="category-chip">Services</span>
+                <h3 class="product-card__title">Services</h3>
+                <p class="product-card__meta">Consultations, soil reports, templates.</p>
+                <div class="product-card__footer" style="border: 0; padding-top: 0.75rem">
+                  <a class="link-cta" href="categories/services.html">Open category</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section seasonal-section" aria-labelledby="seasonal-title">
+        <div class="container seasonal-content">
+          <div id="seasonal-message-rotate" class="seasonal-message-rotate" role="status" aria-live="polite" aria-atomic="true"></div>
+          
+          <div class="seasonal-header">
+            <span class="seasonal-badge">Seasonal Focus</span>
+          </div>
+
+          <div class="seasonal-hero">
+            <div class="seasonal-copy">
+              <h2 id="seasonal-title">Planting Season Guide</h2>
+              <p>This month focus on early-season prep and transplant health.</p>
+              <p class="muted">May is ideal for starting rainy season crops. Prepare soil, select quality seeds, and monitor moisture.</p>
+              
+              <div class="seasonal-countdown" id="seasonal-countdown"></div>
+              
+              <a href="compare.html" class="btn btn--primary">Start Comparing Products</a>
+              <a href="search.html" class="btn btn--outline" style="margin-left: 0.5rem">Advanced Search</a>
+            </div>
+
+            <div class="seasonal-image">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e8f5e9' width='400' height='300'/%3E%3Ctext x='50%' y='50%' font-size='48' text-anchor='middle' dominant-baseline='middle' fill='%232d6a4f' font-weight='bold'%3E🌱 Growing Season%3C/text%3E%3C/svg%3E" alt="Growing season visual" />
+              <span class="seasonal-badge-overlay">Peak Season</span>
+            </div>
+          </div>
+
+          <div class="seasonal-products">
+            <h3>Seasonal Recommendations</h3>
+            <div class="seasonal-grid" id="seasonal-products-grid">Loading seasonal picks…</div>
+          </div>
+
+          <div class="seasonal-tips">
+            <h4>This Month's Focus</h4>
+            <ul id="seasonal-tips-list">
+              <li>Start seeds indoors 6-8 weeks before the last frost</li>
+              <li>Test your soil for pH and nutrient content</li>
+              <li>Prepare raised beds or containers with rich compost</li>
+              <li>Check irrigation systems before the rains arrive</li>
+              <li>Scout for early pests and beneficial insects</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container" style="color: #000; text-align: center;">
+          <h2 class="section__title">Full Editorial</h2>
+          <p class="muted" style="color: #000">Explore seasonal guides, expert tips, and product recommendations updated throughout the year.</p>
+          <a class="btn btn--outline" style="color: #000" href="season.html">Read “What to plant now”</a>
+        </div>
+      </section>
+
+      <!-- Knowledge Base preview -->
+      <section class="section" aria-labelledby="kb-title">
+        <div class="container">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem; margin-bottom: var(--space-lg)">
+            <h2 id="kb-title" class="section__title" style="margin: 0">From the knowledge base</h2>
+            <a class="link-cta" href="blog.html">View all articles →</a>
+          </div>
+          <p class="muted" style="margin-bottom: var(--space-lg)">Practical guides on seeds, soil, pests, and tools—written for real plots.</p>
+          <div id="blog-articles-grid" class="blog-grid" aria-live="polite" aria-busy="true"></div>
+        </div>
+      </section>
+
+      <!-- FAQ Teaser -->
+      <section class="section section--tight" style="background: #f6f3ec" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 id="faq-title" class="section__title">Frequently asked questions</h2>
+          <p class="muted">Quick answers to common questions from new growers.</p>
+          <div id="faq-container"></div>
+        </div>
+      </section>
+
+      <!-- Testimonials / Success Stories -->
+      <section class="testimonials-section" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="testimonials-header">
+            <span class="social-proof-badge"><strong>★ 4.8</strong> from <strong>320+</strong> growers</span>
+            <h2 id="testimonials-title">What growers are saying</h2>
+            <p class="muted">Real feedback from smallholders and serious plot trials across the region.</p>
+          </div>
+
+          <div class="testimonials-carousel" role="region" aria-roledescription="carousel" aria-label="Customer testimonials">
+            <div id="testimonials-container" class="testimonials-container" aria-live="polite" aria-atomic="false"></div>
+
+            <div class="carousel-controls">
+              <button id="testimonials-prev" type="button" class="carousel-btn" aria-label="Previous testimonial">‹</button>
+              <button id="testimonials-next" type="button" class="carousel-btn" aria-label="Next testimonial">›</button>
+            </div>
+
+            <div class="carousel-dots" role="tablist" aria-label="Select testimonial">
+              <button type="button" class="carousel-dot active" role="tab" aria-label="Testimonial 1" aria-selected="true"></button>
+              <button type="button" class="carousel-dot" role="tab" aria-label="Testimonial 2" aria-selected="false"></button>
+              <button type="button" class="carousel-dot" role="tab" aria-label="Testimonial 3" aria-selected="false"></button>
+              <button type="button" class="carousel-dot" role="tab" aria-label="Testimonial 4" aria-selected="false"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community & Feedback -->
+      <section class="section section--tight" aria-labelledby="community-title">
+        <div class="container">
+          <h2 id="community-title" class="section__title">Join the community</h2>
+          <p class="muted">Connect with fellow growers, share field results, and get seasonal updates.</p>
+
+          <div class="community-links">
+            <a class="community-link" href="https://wa.me/2349154683458" rel="noopener noreferrer" aria-label="Join us on WhatsApp">💬 WhatsApp group</a>
+            <a class="community-link" href="https://facebook.com/" rel="noopener noreferrer" aria-label="Follow on Facebook">📘 Facebook</a>
+            <a class="community-link" href="https://twitter.com/" rel="noopener noreferrer" aria-label="Follow on Twitter / X">𝕏 Twitter / X</a>
+            <a class="community-link" href="mailto:davatech202@gmail.com" aria-label="Email the team">✉ Email us</a>
+          </div>
+
+          <div class="community-feedback">
+            <div class="feedback-header">
+              <h3>Share your feedback</h3>
+            </div>
+            <form id="community-feedback-form" class="feedback-form" novalidate>
+              <div>
+                <label for="feedback-name">Your name<span class="required-indicator" aria-hidden="true">*</span></label>
+                <input id="feedback-name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div>
+                <label for="feedback-email">Email<span class="required-indicator" aria-hidden="true">*</span></label>
+                <input id="feedback-email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div>
+                <label for="feedback-message">Feedback<span class="required-indicator" aria-hidden="true">*</span></label>
+                <textarea id="feedback-message" name="message" class="feedback-textarea" required placeholder="What worked? What could be better?"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary feedback-submit">Submit feedback</button>
+            </form>
+            <ul id="feedback-list" class="feedback-list" aria-live="polite"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="logo" href="index.html" style="color: #fff">Agro <span style="color: #ffd6a5">Farmers Delight</span></a>
+          <p style="margin-top: 0.75rem; max-width: 28rem">
+            A curated storefront linking to Selar for checkout. Not a substitute for local extension advice or product labels.
+          </p>
+        </div>
+        <div>
+          <p class="footer-title">Explore</p>
+          <ul class="footer-list">
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="season.html">This season</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Get in touch</p>
+          <ul class="footer-list">
+            <li><a href="mailto:davatech202@gmail.com">Email us</a></li>
+            <li><a href="https://wa.me/2349154683458" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="tel:+2349154683458">Call us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Legal</p>
+          <ul class="footer-list">
+            <li><a href="policies.html">Policies &amp; disclaimers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-meta">© <span id="y"></span> Agro Farmers Delight.</div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/featured-cube-3d.js" defer data-json="data/products.json"></script>
+    <script src="assets/js/product-flip-cards.js" defer></script>
+    <script src="assets/js/seasonal-manager.js" defer data-json="data/products.json"></script>
+    <script src="assets/js/product-recommendations.js" defer data-json="data/products.json"></script>
+    <script src="assets/js/blog-manager.js" defer></script>
+    <script src="assets/js/social-community.js" defer></script>
+  </body>
+</html>

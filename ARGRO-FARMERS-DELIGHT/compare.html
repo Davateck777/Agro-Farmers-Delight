@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compare Products — Agro Farmers Delight</title>
+    <meta name="description" content="Compare agricultural products side-by-side to make informed purchasing decisions." />
+    <link rel="canonical" href="https://agrodelight.farm.com/compare.html" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">Agro <span>Farmers Delight</span></a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="categories/seeds.html">Seeds</a>
+          <a href="categories/crop-protection.html">Crop protection</a>
+          <a href="categories/tools.html">Tools</a>
+          <a href="categories/services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile">
+          <span class="visually-hidden">Menu</span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="categories/seeds.html">Seeds</a>
+        <a href="categories/crop-protection.html">Crop protection</a>
+        <a href="categories/tools.html">Tools</a>
+        <a href="categories/services.html">Services</a>
+        <a href="season.html">This season</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="policies.html">Policies</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <h1>Compare Products</h1>
+          <p class="page-intro muted">View 2-4 products side-by-side to compare features and prices.</p>
+
+          <div id="empty-state" class="empty-state">
+            <p><strong>No products selected</strong></p>
+            <p class="muted">Add products to compare from the catalog or search results.</p>
+            <a href="catalog.html" class="btn btn--primary" style="margin-top: 1rem">Browse Catalog</a>
+          </div>
+
+          <div id="comparison-table" style="display: none; overflow-x: auto">
+            <table class="comparison-table">
+              <thead>
+                <tr id="comparison-header-row">
+                  <th class="comparison-th--label">Attribute</th>
+                </tr>
+              </thead>
+              <tbody id="comparison-tbody">
+                <!-- Dynamically filled -->
+              </tbody>
+            </table>
+
+            <div class="comparison-actions">
+              <button type="button" class="btn btn--primary" id="print-comparison">Print Comparison</button>
+              <button type="button" class="btn btn--outline" id="reset-comparison">Clear All</button>
+              <a href="catalog.html" class="btn btn--outline">Back to Catalog</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="logo" href="index.html" style="color: #fff">Agro <span style="color: #ffd6a5">Farmers Delight</span></a>
+          <p style="margin-top: 0.75rem">Make informed decisions with side-by-side comparison.</p>
+        </div>
+        <div>
+          <p class="footer-title">Explore</p>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="search.html">Search</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-meta">© <span id="y"></span> Agro Farmers Delight.</div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/product-comparison.js" defer data-json="data/products.json"></script>
+  </body>
+</html>

@@ -1,0 +1,409 @@
+/* Search, Filters & Comparison Styles */
+
+/* ============ SEARCH PAGE ============ */
+
+.search-hero {
+  background: linear-gradient(160deg, #e8f5e9 0%, #f6f3ec 55%);
+  padding: 2.5rem 0;
+}
+
+.search-container {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--color-line);
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--color-ink-muted);
+}
+
+.search-btn {
+  padding: 0.75rem 1.75rem;
+  background: var(--color-brand);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+  background: var(--color-brand-dark);
+  transform: translateY(-2px);
+}
+
+.search-btn:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ============ SEARCH LAYOUT ============ */
+
+.search-layout {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 250px 1fr;
+}
+
+@media (max-width: 768px) {
+  .search-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============ FILTERS SIDEBAR ============ */
+
+.search-filters {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-lg));
+}
+
+@media (max-width: 768px) {
+  .search-filters {
+    position: static;
+    top: auto;
+  }
+}
+
+.filters-toggle {
+  display: none;
+  width: 100%;
+  padding: var(--space-md) 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-line);
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.toggle-icon {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .filters-toggle {
+    display: block;
+  }
+
+  .filters-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .filters-content {
+    display: none;
+    padding-top: var(--space-md);
+  }
+
+  .filters-content.is-open {
+    display: block;
+  }
+}
+
+.filter-group {
+  margin-bottom: var(--space-lg);
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-group__title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 var(--space-sm);
+  color: var(--color-ink);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--color-brand);
+}
+
+.filter-option span {
+  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+}
+
+.filter-option:hover span {
+  color: var(--color-ink);
+}
+
+/* ============ SEARCH RESULTS ============ */
+
+.search-results {
+  flex: 1;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.results-count {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+#compare-btn {
+  white-space: nowrap;
+}
+
+#compare-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.results-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: rgba(45, 106, 79, 0.05);
+  border-radius: var(--radius);
+}
+
+.results-toolbar label {
+  font-weight: 600;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.sort-select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Product card with comparison checkbox */
+.product-card--comparable {
+  position: relative;
+}
+
+.product-card--comparable .comparison-checkbox {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: var(--color-brand);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px;
+  border-radius: 4px;
+}
+
+/* ============ COMPARISON TABLE ============ */
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-2xl);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-th--label {
+  background: var(--color-brand-dark);
+  color: #fff;
+  padding: var(--space-lg);
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.comparison-table thead th {
+  background: var(--color-brand-dark);
+  color: #fff;
+  padding: var(--space-lg);
+  text-align: center;
+  font-weight: 600;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.comparison-table thead th:last-child {
+  border-right: none;
+}
+
+.remove-from-comparison {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.remove-from-comparison:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.comparison-table tbody td {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--color-line);
+  text-align: center;
+}
+
+.comparison-table tbody td:first-child {
+  background: rgba(45, 106, 79, 0.05);
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-brand-dark);
+  border-right: 1px solid var(--color-line);
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.product-comparison-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: var(--radius);
+  margin: 0 auto;
+  display: block;
+}
+
+.comparison-actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding: var(--space-lg);
+  background: rgba(45, 106, 79, 0.05);
+  border-radius: var(--radius);
+}
+
+.comparison-actions .btn {
+  flex: 1;
+  min-width: 150px;
+}
+
+@media (max-width: 600px) {
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+
+  .comparison-table thead th,
+  .comparison-table tbody td {
+    padding: var(--space-md);
+  }
+
+  .comparison-th--label,
+  .comparison-table tbody td:first-child {
+    min-width: 100px;
+  }
+
+  .product-comparison-image {
+    max-width: 100px;
+  }
+}
+
+/* ============ ANIMATIONS ============ */
+
+.search-results > * {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ PRINT STYLES ============ */
+
+@media print {
+  body > * {
+    display: none;
+  }
+
+  main {
+    display: block !important;
+  }
+
+  .comparison-table {
+    page-break-inside: avoid;
+  }
+
+  .comparison-actions {
+    display: none;
+  }
+
+  .search-filters,
+  .results-toolbar {
+    display: none;
+  }
+}

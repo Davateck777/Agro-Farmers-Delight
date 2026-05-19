@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Catalog — Agro Farmers Delight</title>
+    <meta name="description" content="Complete catalog of 25 agricultural products: seeds, crop protection, tools, and expert services. All with secure checkout on Selar." />
+    <meta name="keywords" content="agricultural products, seeds catalog, crop protection, farming tools, farm services" />
+    <link rel="canonical" href="https://agrodelight.farm.com/catalog.html" />
+    <meta property="og:title" content="Product Catalog — Agro Farmers Delight" />
+    <meta property="og:description" content="Shop all 25 curated agricultural products for serious growers. Seeds, inputs, tools, and consultations." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agrodelight.farm.com/catalog.html" />
+    <meta property="og:image" content="https://agrodelight.farm.com/assets/images/hero/og-catalog.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Product Catalog — Agro Farmers Delight" />
+    <meta name="twitter:description" content="Browse 25 agricultural products with Selar checkout." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">Agro <span>Farmers Delight</span></a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="catalog.html" aria-current="page">Catalog</a>
+          <a href="search.html">Search</a>
+          <a href="categories/seeds.html">Seeds</a>
+          <a href="categories/crop-protection.html">Crop protection</a>
+          <a href="categories/tools.html">Tools</a>
+          <a href="categories/services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile">
+          <span class="visually-hidden">Menu</span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="search.html">Search</a>
+        <a href="categories/seeds.html">Seeds</a>
+        <a href="categories/crop-protection.html">Crop protection</a>
+        <a href="categories/tools.html">Tools</a>
+        <a href="categories/services.html">Services</a>
+        <a href="season.html">This season</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="policies.html">Policies</a>
+      </div>
+    </header>
+
+    <main id="catalog-root">
+      <section class="section">
+        <div class="container">
+          <h1 class="anim-slide-in-left">Full catalog</h1>
+          <p class="page-intro muted anim-slide-in-left">Twenty-five curated products across seeds, protection, tools, and services. Flip a card for Selar checkout.</p>
+
+          <div id="catalog-filters" class="toolbar anim-slide-in-left" role="group" aria-label="Filter by category">
+            <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="seeds">Seeds</button>
+            <button type="button" class="filter-btn" data-filter="crop-protection">Crop protection</button>
+            <button type="button" class="filter-btn" data-filter="tools">Tools</button>
+            <button type="button" class="filter-btn" data-filter="services">Services</button>
+          </div>
+
+          <div id="catalog-empty" class="empty-state" role="status">
+            <p>No products match this filter.</p>
+          </div>
+
+          <div id="catalog-grid" class="card-grid catalog-grid--column-drop" aria-live="polite">
+            <p class="muted">Loading products…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="logo" href="index.html" style="color: #fff">Agro <span style="color: #ffd6a5">Farmers Delight</span></a>
+          <p style="margin-top: 0.75rem">Curated listings · Checkout on Selar.</p>
+        </div>
+        <div>
+          <p class="footer-title">Explore</p>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="policies.html">Policies</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Help</p>
+          <ul class="footer-list">
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-meta">© <span id="y"></span> Agro Farmers Delight.</div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/catalog-filter.js" defer data-json="data/products.json"></script>
+  </body>
+</html>

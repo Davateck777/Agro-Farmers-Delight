@@ -1,0 +1,78 @@
+/* Responsive typography, cards grid tweaks, images, nav mobile already in layout */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Fluid section rhythm */
+.section {
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Hero text block */
+.hero__copy h1 {
+  hyphens: auto;
+}
+
+/* Ensure cube scales down on very narrow screens */
+.cube-scene {
+  max-width: 100%;
+}
+
+/* Flip cards: keep enough height on small screens so price/title are not clipped */
+@media (max-width: 559px) {
+  .flip-card {
+    min-height: 24rem;
+  }
+
+  .flip-card__inner {
+    min-height: 22rem;
+  }
+
+  .flip-card__media {
+    max-height: 10rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Product detail prose */
+.prose {
+  max-width: 42rem;
+}
+
+.prose img.responsive-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.prose img.responsive-img[src$=".png"] {
+  object-fit: contain;
+  max-height: min(70vh, 32rem);
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--color-bg);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-line);
+  text-align: left;
+}
+
+.spec-table th {
+  width: 38%;
+  color: var(--color-ink-muted);
+  font-weight: 600;
+}

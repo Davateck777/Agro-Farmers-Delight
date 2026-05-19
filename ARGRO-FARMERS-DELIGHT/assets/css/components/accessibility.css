@@ -1,0 +1,459 @@
+/* Accessibility Enhancements */
+
+/* Enhanced Focus Indicators */
+:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  :root {
+    --color-ink: #000;
+    --color-ink-muted: #1c2a1f;
+    --color-line: #666;
+  }
+
+  button,
+  a {
+    border-width: 2px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Enhanced Skip Link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  z-index: 100;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-brand-dark);
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  background: var(--color-brand);
+  box-shadow: var(--shadow-md);
+}
+
+/* Keyboard Navigation Visual Indicators */
+.keyboard-nav-active:focus-visible {
+  outline: 3px double var(--color-brand);
+  outline-offset: 3px;
+}
+
+/* Enhanced Link Underlines */
+a:not([class]):not(.btn):not(.skip-link) {
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 0.2s ease;
+}
+
+a:not([class]):not(.btn):not(.skip-link):hover {
+  text-decoration-color: var(--color-brand);
+}
+
+/* ARIA Live Regions */
+[role="status"],
+[role="alert"],
+[aria-live] {
+  position: relative;
+  display: block;
+}
+
+/* Visually Hidden but Readable by Screen Readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Form Accessibility */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-line);
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+}
+
+/* Required Field Indicator */
+input[required]::after,
+textarea[required]::after,
+select[required]::after {
+  content: " *";
+  color: #d32f2f;
+}
+
+.required-indicator {
+  color: #d32f2f;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+
+/* Error Message Styling */
+.form-error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.form-error::before {
+  content: "⚠ ";
+  font-weight: 700;
+}
+
+input.error,
+textarea.error,
+select.error {
+  border-color: #d32f2f;
+  background-color: rgba(211, 47, 47, 0.05);
+}
+
+/* Checkbox and Radio Accessibility */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--color-brand);
+}
+
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* Enhanced Button States */
+button:disabled,
+a.btn:aria-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Color Contrast Enhancements */
+.muted {
+  color: var(--color-ink-muted);
+}
+
+@media (prefers-contrast: more) {
+  .muted {
+    color: #4a5c4e;
+    font-weight: 500;
+  }
+}
+
+/* Tooltip Accessibility */
+.tooltip {
+  position: relative;
+}
+
+.tooltip[aria-label]::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-ink);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  margin-bottom: 0.5rem;
+  z-index: 1000;
+}
+
+.tooltip:hover::after,
+.tooltip:focus::after {
+  opacity: 1;
+}
+
+/* Headings Hierarchy */
+h1 {
+  font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 1.15rem + 0.9vw, 1.85rem);
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);
+  line-height: 1.3;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+/* Link Target Size */
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"] {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text Resizing Support */
+@media (font-size: 200%) {
+  body {
+    font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+  }
+}
+
+/* Print Accessibility */
+@media print {
+  a::after {
+    content: " (" attr(href) ")";
+    word-break: break-word;
+  }
+
+  .skip-link,
+  .nav-toggle,
+  .sidebar,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  a,
+  a:visited {
+    color: #000;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  ul,
+  ol,
+  pre {
+    page-break-inside: avoid;
+  }
+}
+
+/* Focus Management for Modals/Dialogs */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-overlay.is-open {
+  display: block;
+}
+
+dialog {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  max-width: 500px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Content Zooming Support */
+@supports (zoom: 150%) {
+  body {
+    zoom: 1;
+  }
+}
+
+/* Cursor Indicators for Interactive Elements */
+button,
+a[href],
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+select:disabled {
+  cursor: not-allowed;
+}
+
+/* Consistent Focus Order */
+a,
+button,
+input,
+select,
+textarea {
+  position: relative;
+}
+
+/* Line Height for Readability */
+body {
+  line-height: 1.6;
+}
+
+@media (prefers-contrast: more) {
+  body {
+    line-height: 1.8;
+  }
+}
+
+/* Letter Spacing for Better Readability */
+@media (prefers-contrast: more) {
+  p,
+  li,
+  dt,
+  dd {
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Color Blind Support */
+.color-blind-safe {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(68, 68, 68, 0.05) 35px,
+    rgba(68, 68, 68, 0.05) 70px
+  );
+}
+
+/* Mobile Accessibility */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select,
+  button,
+  a {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  a,
+  button {
+    min-width: 48px;
+  }
+}
+
+/* Scrollbar Accessibility */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(45, 106, 79, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-dark);
+}

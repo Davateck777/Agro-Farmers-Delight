@@ -1,0 +1,17 @@
+/* Agro Farmers Delight — stylesheet bundle */
+
+@import url("base.css");
+@import url("layout.css");
+@import url("components/cards.css");
+@import url("components/cube-3d.css");
+@import url("components/flip-card.css");
+@import url("components/search-comparison.css");
+@import url("components/seasonal.css");
+@import url("components/recommendations.css");
+@import url("components/blog.css");
+@import url("components/social-community.css");
+@import url("components/accessibility.css");
+@import url("animations/slide-in-left.css");
+@import url("animations/scale-pulse.css");
+@import url("animations/opacity-fade.css");
+@import url("responsive.css");

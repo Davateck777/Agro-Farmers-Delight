@@ -1,0 +1,149 @@
+/* 3D flip cards — other products */
+
+.flip-card {
+  perspective: 1200px;
+  min-height: 26rem;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card:focus-visible {
+  outline: none;
+}
+
+.flip-card:focus-visible .flip-card__inner {
+  box-shadow: 0 0 0 3px var(--color-brand), var(--shadow-md);
+}
+
+.flip-card__inner {
+  position: relative;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 24rem;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius-lg);
+}
+
+.flip-card.is-flipped .flip-card__inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.flip-card__front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  overflow: visible;
+}
+
+.flip-card__back {
+  transform: rotateY(180deg);
+  padding: var(--space-md);
+  justify-content: space-between;
+}
+
+.flip-card__media {
+  flex-shrink: 0;
+  aspect-ratio: 16 / 10;
+  max-height: 11.5rem;
+  background: #e8e6e1;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+}
+
+.flip-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Project PNG assets (mixed aspect ratios — pack shots, banners, portrait jugs) */
+.flip-card__media img[src$=".png"] {
+  object-fit: contain;
+  object-position: center;
+  background: linear-gradient(180deg, #f4f2ed 0%, #e8e4dc 100%);
+}
+
+.flip-card__front-body {
+  padding: var(--space-md);
+  padding-bottom: calc(var(--space-md) + 0.25rem);
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.flip-card__front-body h3 {
+  margin: 0;
+  line-height: 1.25;
+}
+
+.flip-card__front-body .muted,
+.flip-card__front-body .price {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.flip-card__hint {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+}
+
+.flip-card__back h3 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.05rem;
+}
+
+.flip-card__back p {
+  margin: 0 0 var(--space-md);
+  font-size: 0.9rem;
+  color: var(--color-ink-muted);
+}
+
+.flip-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.flip-card__actions .btn {
+  width: 100%;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-card__inner {
+    transition: none;
+  }
+
+  .flip-card.is-flipped .flip-card__inner {
+    transform: none;
+  }
+
+  .flip-card__back {
+    position: relative;
+    transform: none;
+    margin-top: var(--space-md);
+    border-radius: var(--radius);
+  }
+
+  .flip-card__front {
+    position: relative;
+  }
+}

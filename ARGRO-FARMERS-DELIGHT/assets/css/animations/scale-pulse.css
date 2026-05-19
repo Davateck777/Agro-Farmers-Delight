@@ -1,0 +1,28 @@
+/* Scale pulse accent */
+
+@keyframes scale-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.anim-scale-pulse {
+  animation: scale-pulse 2.4s ease-in-out infinite;
+  display: inline-block;
+}
+
+.anim-scale-pulse-soft {
+  animation: scale-pulse 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-scale-pulse,
+  .anim-scale-pulse-soft {
+    animation: none;
+  }
+}
